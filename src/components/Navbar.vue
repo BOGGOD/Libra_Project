@@ -1,6 +1,6 @@
 <template>
  
-<nav class="bg-gray-800 dark:bg-black-900">
+<nav id="app" class="bg-gray-800 dark:bg-black-900">
   <div class="mx-auto max-w-7xl">
     <div class="relative flex h-16 items-center justify-between">
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -12,24 +12,16 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="#" class="text-gray-300 border-b-4 border-gray-800 hover:border-sky-500 px-3 py-2 text-sm font-medium cursor-grabbing">Каталог</a>
             <a href="#" class="text-gray-300 border-b-4 border-gray-800 hover:border-sky-500 px-3 py-2 text-sm font-medium cursor-pointer">Топи</a>
+ 
           </div>
         </div>
         <div class="flex flex-1 justify-end">
           <div class="flex space-x-4">
+ 
             <a href="#" class="text-gray-300 border-b-4 border-gray-800 hover:border-sky-500 px-3 py-2 text-sm font-medium">Закладки</a>
-            <button 
-            
-            class="p-2 focus:outline-none">
-              Login
- 
-            </button>
- 
-            <button
-             
-              class="text-gray-300 border-b-4 border-gray-800 hover:border-sky-500 px-3 py-2 text-sm font-medium"
-              >
-              Toggle Dark Mode
-            </button> 
+
+            <DarkMode  />
+
             <div class="flex lg:ml-6">
               <a href="https://remanga.org/" class="p-2 text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Налаштування</span>
@@ -39,8 +31,8 @@
               </a>
             </div>
  
-            <button class="text-gray-300 bg-sky-700 rounded-full px-3 py-2  hover:bg-sky-500 text-sm font-medium"> Войти</button>
-
+            <button  @click="isVoiceModalOpen = true" class="text-gray-300 bg-sky-700 rounded-full px-3 py-2  hover:bg-sky-500 text-sm font-medium"> Login</button>
+            <ModalWindow v-if="isVoiceModalOpen" @close="isVoiceModalOpen = false"  />
           </div> 
         </div>
       </div>
@@ -61,7 +53,13 @@
  
 </template>
 
-<script setup>
+<script setup >
+import {ref} from 'vue';
+import DarkMode from './DarkMode.vue';
+import ModalWindow from './ModalWindow.vue';
+ 
+  const isVoiceModalOpen = ref(false);
+    
  
 </script>
 

@@ -5,11 +5,16 @@
  import MainList from  './components/MainList.vue';
  import MangaFooter from  './components/MangaFooter.vue';
  
+
+ 
 </script>
 
 
 <template>
  <Navbar/> 
+
+ 
+
 
 
 <HotNew/>
