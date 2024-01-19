@@ -14,7 +14,8 @@
     onMounted(() => {
        el.value
 
-       const backendURL = 'http://127.0.0.1:8000'; // Replace with your actual backend URL
+       const backendURL = import.meta.env.VITE_APP_API_URL; // Replace with your actual backend URL
+       console.log(backendURL);
 
        const registrationForm = document.getElementById("registration-form");
         registrationForm.addEventListener("submit", async (event) => {
