@@ -1,17 +1,19 @@
 <script setup  >
- import Navbar from './components/Navbar.vue';
- import HotNew  from './components/HotNew.vue';
- import Novels from './components/Novels.vue';
- import MainList from  './components/MainList.vue';
- import MangaFooter from  './components/MangaFooter.vue';
+//  import Navbar from './components/Navbar.vue';
+//  import HotNew  from './components/HotNew.vue';
+//  import Novels from './components/Novels.vue';
+//  import TitleList from  './components/TitleList.vue';
+//  import MangaFooter from  './components/MangaFooter.vue';
  
-
+ 
+ 
+ 
  
 </script>
 
 
 <template>
- <Navbar/> 
+ <!-- <Navbar/> 
 
  
 
@@ -19,13 +21,14 @@
 
 <HotNew/>
 <Novels/>
-<MainList/>
+<TitleList/> -->
+<router-view></router-view>
   
 
 
  
  <footer>
-  <MangaFooter/>
+  <!-- <MangaFooter/> -->
  </footer>
 </template>
  

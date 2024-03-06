@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
   import CloseButton from './CloseButton.vue'
   import ModalWindow from './ModalWindow.vue'
   import {ref, onMounted,} from 'vue'
@@ -80,4 +80,11 @@
        </div>
    </button>
 </template>
-  
+   -->
+<script>
+</script>
+
+<template>
+
+    
+</template>

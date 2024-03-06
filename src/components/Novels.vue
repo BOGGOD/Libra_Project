@@ -1,71 +1,49 @@
 <template>
-<div   id="app" class="bg-white dark:bg-neutral-600 dark:text-neutral-200 ">
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+<div     class="bg-white dark:bg-neutral-900 dark:text-neutral-200 ">
+  <div class="mx-auto max-w-2xl  py-16 sm:px-6 sm:py-24 lg:max-w-7xl  ">
     <h2 class="text-2xl font-bold tracking-tight mb-8 text-sky-400">Новели</h2>
-
-    <div class="grid grid-cols-8 gap-x-1 gap-y-4 ">
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg" alt="Olive drab green insulated bottle with flared screw lid and flat top." class="h-full w-full object-cover object-center group-hover:opacity-75">
+    <div   class="mx-auto max-w-2xl pb-16 overflow-hidden    lg:max-w-7xl  ">
+    <div   class="grid grid-row gap-x-7 gap-y-4   ">
+     <div  class=" grid grid-row  ">
+       <div    class=" flex flex-row"> 
+         <div     v-for="item in dates"  :key="item.id" class="group px-2"   >
+          <!-- <div > Вставити сюди v-if='значення фільтру'  -->
+           <div   class="w-36 h-48  rounded-lg bg-gray-200"> 
+            <img :src="`data:image/png;base64,${item.cover_image} `" /> 
+           </div>
+           <h3 class="mt-4 text-sm text-gray-700 dark:text-white">{{ item.name }}  </h3>
+           <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">{{ item.year }} {{ item.year }}</p>
+          
+          <!-- </div> -->
+         </div>
         </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Nomad Tumbler</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg" alt="Person using a pen to cross a task off a productivity paper card." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Focus Paper Refill</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$89</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Machined Mechanical Pencil</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white" >$35</p>
-      </a>
-      <a href="#" class="group">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-          <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg" alt="Hand holding black machined steel mechanical pencil with brass tip and top." class="h-full w-full object-cover object-center group-hover:opacity-75">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700 dark:text-white">Dick</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900 dark:text-white" >$35</p>
-      </a>
     </div>
+ </div>
+</div>
   </div>
 </div>
 </template>
 
 <script setup  >
+     import {ref, onMounted,onBeforeUpdate,onBeforeMount} from 'vue'
+  
+ 
+ 
+  const backend = 'http://127.0.0.1:8000/manga'
+   
+  const dates = ref([])
+
+  const getData = async () => {
+    const res = await fetch(backend);
+    return await res.json();
+}
+
+    onBeforeMount(async () => {
+          const result = await getData();
+          dates.value = result
+          console.log(dates.value)
+          
+    })
 
 </script>
 

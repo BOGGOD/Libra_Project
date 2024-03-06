@@ -1,6 +1,6 @@
 <template>
  
-<nav id="app" class="bg-gray-800 dark:bg-black-900">
+<nav id="app" class="bg-gray-800 dark:bg-neutral-900">
   <div class="mx-auto max-w-7xl">
     <div class="relative flex h-16 items-center justify-between">
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
